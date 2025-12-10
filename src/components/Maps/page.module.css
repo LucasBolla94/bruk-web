@@ -1,7 +1,8 @@
-.fullscreen {
+/* esse cara agora só ocupa 100% do PAI, não da tela */
+.wrapper {
   position: relative;
-  width: 100vw;
-  height: 100vh; /* ocupa tela inteira */
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -10,7 +11,7 @@
   height: 100%;
 }
 
-/* Overlay com estilo courier premium */
+/* Overlay com estilo courier premium lilás */
 .overlay {
   position: absolute;
   top: 20px;
@@ -19,7 +20,7 @@
   background: rgba(10, 7, 20, 0.45);
   border-radius: 14px;
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(180, 120, 255, 0.35);
+  border: 1px solid rgba(180, 120, 255, 0.5);
 }
 
 .title {

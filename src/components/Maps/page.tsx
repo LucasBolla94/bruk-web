@@ -29,15 +29,12 @@ export default function Maps() {
 
       mapInstanceRef.current = map;
 
-      // Tile clean estilo Zenly / desenho
       L.tileLayer(
         'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
         {
           maxZoom: 19,
         }
       ).addTo(map);
-
-      // Sem pins, sem popup — clean total
     };
 
     initMap();
@@ -52,10 +49,9 @@ export default function Maps() {
   }, []);
 
   return (
-    <div className={styles.fullscreen}>
+    <div className={styles.wrapper}>
       <div ref={mapRef} className={styles.map} />
 
-      {/* Overlay elegante opcional (pode remover se quiser) */}
       <div className={styles.overlay}>
         <h2 className={styles.title}>BrUk Couriers – Glasgow Live Map</h2>
         <p className={styles.subtitle}>
