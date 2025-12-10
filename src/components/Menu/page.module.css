@@ -1,0 +1,85 @@
+/* Barra principal do menu */
+.page {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9); /* branco quase sólido */
+  backdrop-filter: blur(8px); /* deixa suave, mais "app" */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Conteúdo interno: logo à esquerda, links à direita */
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Área do logo + nome da empresa */
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  border-radius: 10px;
+}
+
+.brand {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #111111; /* preto */
+}
+
+/* Menu de links */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+/* Links individuais */
+.link {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #222222; /* preto suave */
+  padding: 6px 12px;
+  border-radius: 999px; /* formato de “pílula” */
+  transition: background-color 0.2s ease, color 0.2s ease,
+    transform 0.15s ease;
+}
+
+/* Efeito ao passar o mouse */
+.link:hover {
+  background: rgba(255, 204, 0, 0.18); /* amarelo bem leve */
+  color: #111111;
+  transform: translateY(-1px);
+}
+
+/* Clique */
+.link:active {
+  transform: translateY(0);
+  opacity: 0.85;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+  .inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .menu {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}

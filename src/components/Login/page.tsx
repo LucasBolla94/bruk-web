@@ -5,8 +5,8 @@ export default function Login() {
     return(
         <div>
             <Form action="" className={styles.formLogin}>
-                <input name="" placeholder="Email" type="email" className={styles.input}/>
-                <input type="password" name="password" placeholder="Password" className={styles.input} />
+                <input name="email" placeholder="Email" type="email" required className={styles.input}/>
+                <input type="password" name="password" placeholder="Password" required className={styles.input} />
                 <button type="submit" className={styles.button}>Login</button>
             </Form>
         </div>
